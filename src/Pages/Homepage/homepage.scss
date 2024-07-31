@@ -1,0 +1,349 @@
+:root{
+    --background-primary: #01101d;
+    --background-secondary: rgb(8, 8, 8);
+    --background-tertiary: #26355D;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.section-title{
+    text-align: left;
+    color: white;
+    margin: 10px 50px
+}
+
+.homepage-container{
+    width: 100vw;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-color: var(--background-secondary);
+    overflow-x: hidden;
+    
+    .homepage-wrapper{
+        width: 100%;
+        height: auto;
+        
+        .hero-section{
+            width: 100%;
+            min-height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            &::after{
+                width: 100%;
+                height: 100%;
+                content: "";
+                top: 0;
+                left: 0;
+                position: absolute;
+                background-color: black;
+                opacity: .8;
+            }
+            
+            .hero-content{
+                overflow-x: hidden;
+                position: relative;
+                height: 100vh;
+                width: 100%;
+
+                .movieDetails{
+                    position: absolute;
+                    transition: ease-in-out 400ms;
+                    left: 50px;
+                    z-index: 10;
+                    bottom: 150px;
+                    width: 40%;
+                    font-size: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    color: white;
+
+                    h1{
+                        font-size: 2rem;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
+                    .info{
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 5px;
+
+                        span{
+                            border-right: 2px solid white;
+                            padding: 0px 5px;
+                            &:last-child{
+                                border: none;
+                            }
+                        }
+                    }
+                    p{
+                        font-size: .9rem;
+                        line-height: 1.4rem;
+                    }
+                    .cta{
+                        button{
+                            padding: 8px 20px;
+                            border: none;
+                            background-color: red;
+                            color: white;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .movie-list{
+                    position: absolute;
+                    right: 50px;
+                    padding: 20px 40px;
+                    z-index: 10;
+                    bottom: 150px;
+                    width: 40%;
+                    font-size: 1rem;
+                    background: rgba(255, 255, 255, 0.2);
+                    border-radius: 2px;
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(5px);
+                    -webkit-backdrop-filter: blur(5px);
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+
+                    .movie-card{
+                        width: 150px;
+                        height: 200px;
+                        position: relative;
+                        cursor: pointer;
+                        &::after{
+                            width: 100%;
+                            height: 100%;
+                            content: "";
+                            top: 0;
+                            left: 0;
+                            background-color: black;
+                            position: absolute;
+                            opacity: .7;
+                        }
+
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 2px;
+                        }
+                        h1{
+                            position: absolute;
+                            bottom: 0;
+                            left: 40%;
+                            color: rgb(255, 255, 255);
+                            font-weight: 400;
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .showUp{
+                        transform: scaleZ(10);
+                        width: 180px;
+                        height: 220px;
+                        transition: ease 400ms;
+                        &::after{
+                            background-color: black;
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        // -----------------Category section--------------
+        .category{
+            margin: 50px 0px;
+            min-height: 50vh;
+            background-color: rgb(12, 12, 12);
+            padding: 50px 0px;
+            
+            .category-title{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(15, 15, 15);
+                color: white;
+                width: fit-content;
+                padding: 10px 50px;
+                margin: auto;
+                gap: 50px;
+    
+                span{
+                    padding: 5px 15px;
+                    border-radius: 3px;
+                    cursor: pointer;
+                }
+                .active{
+                    background-color: red;
+                }
+            }
+            .category-movies{
+                padding: 10px 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+
+                svg{
+                    width: 20px;
+                    height: 20px;
+                    font-weight: 100;
+                    color: white;
+                    cursor: pointer;
+                }
+
+                .category-card{
+                    color: white;
+                    font-size: .8rem;
+                    width: 100px;
+                    height: 150px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    h3{
+                        font-weight: 500;
+                    }
+                    .ratings{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+        
+
+
+        // ----------------Trending movies-----------------
+        .trending{
+            margin: 50px 0px;
+            min-height: 50vh;
+            background-color: rgb(12, 12, 12);
+            padding: 50px 0px;
+
+            .trending-container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+                padding: 0px 100px;
+
+                .trending-card{
+                    color: white;
+                    font-size: .8rem;
+                    width: 100px;
+                    height: 150px;
+                    display: block;
+                    margin-top: 50px;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    h3{
+                        font-weight: 500;
+                    }
+                    .ratings{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                }
+                svg{
+                    width: 20px;
+                    height: 20px;
+                    font-weight: 100;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+        
+        
+        // ----------------Discussion movies-----------------
+        .discussion{
+            margin: 50px 0px;
+            min-height: 50vh;
+            background-color: rgb(12, 12, 12);
+            padding: 50px 0px;
+            color: white;
+
+            .discussion-container{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .discussion-card{
+                    background-color: #01101d;
+                    width: 250px;
+                    height: 200px;
+                    padding: 10px;
+                
+                    h3{
+                        font-size: .9rem;
+                        font-weight: 600;
+                    }
+                
+                    .comments{
+                        border-radius: 10px;
+                        font-size: .7rem;
+
+                        .comment{
+                            background-color: rgb(238, 236, 236);
+                            color: black;
+                            margin-bottom: 10px;
+                            border-radius: 3px;
+                            padding: 5px;
+                            
+                            .comment-profile{
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                gap: 5px;
+                                font-weight:400 ;
+
+                                svg{
+                                    width: 20px;
+                                    height: 20px;
+                                }
+                            }
+                            p{
+                                font-size: .8rem;
+                                font-weight: 300;
+                            }
+                        }
+                        .read-more{
+                            padding: 5px 10px;
+                            background-color: var(--background-primary);
+
+                            color: white;
+                            font-weight: 600;
+                            border: none;
+                            border-radius: 3px;
+                            cursor: pointer;
+                        }
+                    }
+
+            }
+         }
+
+        }
+    }
+}
