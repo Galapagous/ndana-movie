@@ -1,3 +1,9 @@
+a{
+  text-decoration: none;
+  color: inherit;
+
+}
+
 
 .header-container {
     position: fixed;
@@ -27,7 +33,7 @@
   }
   
   .logo {
-    h1 {
+    a {
       color: #e50914;
       font-size: 1.8rem;
       font-weight: bold;

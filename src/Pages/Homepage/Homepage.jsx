@@ -25,6 +25,7 @@ import Wednesday from '../../assets/images/wednesday.jpg'
 import { CgProfile } from 'react-icons/cg'
 import Footer from '../../Components/Footer/Footer'
 import { FaGreaterThan } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 // --------end of trending images---------------
 
@@ -254,7 +255,9 @@ const handleCategorySelection = (index)=>{
                 )
               })
             }
-            <FaGreaterThan/>
+            <Link to='/search'>
+              <FaGreaterThan/>
+            </Link>
           </div>
         </section>
 

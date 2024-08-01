@@ -2,6 +2,7 @@
     --background-primary: #01101d;
     --background-secondary: rgb(8, 8, 8);
     --background-tertiary: #26355D;
+    --background-mix: rgb(12, 12, 12);
 }
 
 *{
@@ -17,7 +18,7 @@
 }
 
 .homepage-container{
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
     min-height: 100vh;
     background-color: var(--background-secondary);
@@ -167,8 +168,10 @@
         .category{
             margin: 50px 0px;
             min-height: 50vh;
-            background-color: rgb(12, 12, 12);
+            background-color: var(--background-mix);
             padding: 50px 0px;
+            width: 100vw;
+            overflow-x: hidden;
             
             .category-title{
                 display: flex;
@@ -233,8 +236,10 @@
         .trending{
             margin: 50px 0px;
             min-height: 50vh;
-            background-color: rgb(12, 12, 12);
+            background-color: var(--background-mix);
             padding: 50px 0px;
+            width: 100vw;
+            overflow-x: hidden;
 
             .trending-container{
                 display: flex;
@@ -281,9 +286,11 @@
         .discussion{
             margin: 50px 0px;
             min-height: 50vh;
-            background-color: rgb(12, 12, 12);
+            background-color: var(--background-mix);
             padding: 50px 0px;
             color: white;
+            width: 100vw;
+            overflow-x: hidden;
 
             .discussion-container{
                 width: 100%;

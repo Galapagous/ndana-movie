@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { BiSearch } from 'react-icons/bi';
 import './header.scss';
 import { Input } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [formData, setFormData] = useState({})
@@ -16,7 +17,7 @@ const Header = () => {
     <header className='header-container'>
       <div className='header-content'>
         <div className='logo'>
-          <h1>Ndana</h1>
+          <Link to='/'>Ndana</Link>
         </div>
         <nav className='site-nav'>
           <ul>
